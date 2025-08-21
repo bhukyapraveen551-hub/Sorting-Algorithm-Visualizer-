@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card inptWrap">
+        <div class="from">
+          <span class="heading">From :</span>
+          <div class="dropContainer" id="inLang">
+            <div class="dropTog">
+              <ion-icon name="globe-outline"></ion-icon>
+              <span class="sel" data-value="auto">Auto Detect</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <ul class="dropMenu">
+              <li class="activeOpt">DropDown Menu Item 1</li>
+              <li class="opt">DropDown Menu Item 2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="txtArea">
+          <textarea
+            id="inTxt"
+            cols="30"
+            rows="10"
+            placeholder="Enter text"
+          ></textarea>
+          <div class="charCnt"><span id="inChar">0</span> / 5000</div>
+        </div>
+        <div class="cardBottom">
+          <p>Or choose your doc</p>
+          <label for="uploadDoc">
+            <span id="upTtl">Choose File</span>
+            <ion-icon name="cloud-upload-outline"></ion-icon>
+            <input type="file" id="uploadDoc" hidden />
+          </label>
+        </div>
+      </div>
+
+      <div class="mid">
+        <div class="swpBtn">
+            <ion-icon name="swap-horizontal-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="card outWrap">
+        <div class="to">
+          <span class="heading">To :</span>
+          <div class="dropContainer" id="outLang">
+            <div class="dropTog">
+              <ion-icon name="globe-outline"></ion-icon>
+              <span class="sel" data-value="en">English</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <ul class="dropMenu">
+              <li class="activeOpt">DropDown Menu Item 1</li>
+              <li class="opt">DropDown Menu Item 2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="txtArea">
+          <textarea
+            id="outTxt"
+            cols="30"
+            rows="10"
+            placeholder="Translation"
+            disabled
+          ></textarea>
+        </div>
+        <div class="cardBottom">
+          <p>Download as a doc</p>
+          <button id="downloadBtn">
+            <span>Download</span>
+            <ion-icon name="cloud-download-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
